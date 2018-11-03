@@ -1,0 +1,38 @@
+shafts = 24;
+treadles = 24;
+
+colors = ["#000000", "#FFFFFF", "#FF0000"];
+
+for (var i = 1; i <= shafts; i++) {
+  tieup.push([i]);
+}
+
+var block = [1,2];
+
+var blockWidth = 4;
+
+for (var i = 0; i < shafts/4; i++) {
+  for (var j = 0; j < blockWidth; j++)
+  {
+    for (var k = 0; k < block.length; k++) {
+      threading.push(block[k] + i);
+      threading.push(block[k] + shafts/2 + i);
+    }
+  }
+  threading.pop();
+  threading.pop();
+}
+
+for (var i = 0; i < threading.length/2; i++) {
+  threads.push(0);
+  threads.push(1);
+}
+
+for (var i = 0; i < shafts; i++) {
+  treadling.push(i);
+}
+
+for (var i = 0; i < treadling.length; i++) {
+  weftThreads.push(2);
+}
+logWif();
